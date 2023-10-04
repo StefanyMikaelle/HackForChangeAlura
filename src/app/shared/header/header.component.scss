@@ -1,39 +1,62 @@
 .app-header {
 
-  button {
-    margin: 0 16px;
-  }
-
-  .spacer {
-    flex: 1 1 auto;
-  }
-
   .mat-toolbar {
-    background-color: white;
-    color: #443fde;
-    padding: 0 256px;
+    background-color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
   }
 
-  .links-toolbar > * {
-    margin-right: 20px;
+  a {
+    text-decoration: none;
+    color: inherit;
+    align-content: center;
+    margin-left: 15px;
+    margin-top: 10px;
   }
 
-  .links-toolbar > *:first-child {
-    margin-right: 0;
+  .logo{
+    color: #3EA5FB;
+    font-size: 36px;
+    font-weight: 500;
   }
 
-  img {
-    vertical-align: middle;
-    margin-top: 4rem;
-    height: 15rem;
-    width: 15rem;
+  .auth-toolbar {
+    display: flex; /* Alinhar itens à direita */
+    align-items: center; /* Centralizar verticalmente */
+  }
+
+  .links-toolbar > button[mat-button]{
+    justify-content: center;
+    margin: 15px;
+  }
+
+  button{
+    font-size: 24px;
+  }
+
+  button[mat-button]{
+    color: #57636C;
+  }
+
+  button[routerlink="/login"]{
+    background-color: #3EA5FB;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
   }
 
   .mat-mdc-outlined-button:not(:disabled) {
-    border-color: #673ab7;
-    color: #673ab7;
+    border-color: #3EA5FB;
+    color: #3EA5FB;
+    border-radius: 10px;
   }
 
+  @media (max-width: 600px) {
+    /* TODO */
+
+  }
 }
 
 

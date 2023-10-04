@@ -1,12 +1,14 @@
 <header class="app-header">
   <mat-toolbar>
     <a routerLink="/">
-      <img src="assets/imagens/logo.png" alt="Logo da aplicação Jornada">
+      <p class="logo">Mão Amiga</p>
     </a>
-    <span class="spacer"></span>
     <div class="links-toolbar">
-      <button mat-button>Vaquinha</button>
-      <button mat-button>Eventos</button>
+      <button mat-button>Como funciona?</button>
+      <button mat-button>Crie um projeto</button>
+      <button mat-button>Explorar</button>
+    </div>
+    <div class="auth-toolbar">
       <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">
         <a routerLink="/perfil">
           <img src="assets/icones/user.png" alt="Ícone da pessoa usuária">
@@ -14,8 +16,8 @@
         <button mat-stroked-button color="primary" (click)="logout()">SAIR</button>
       </ng-container>
       <ng-template #login>
-        <button routerLink="/cadastro" mat-raised-button color="primary">CADASTRE-SE</button>
-        <button routerLink="/login" mat-stroked-button>LOGIN</button>
+        <button routerLink="/cadastro" mat-stroked-button>CADASTRAR</button>
+        <button routerLink="/login" mat-raised-button>LOGIN</button>
       </ng-template>
     </div>
   </mat-toolbar>
