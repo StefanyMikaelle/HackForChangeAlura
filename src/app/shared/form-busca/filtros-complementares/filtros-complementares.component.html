@@ -1,0 +1,17 @@
+<form [formGroup]="formBuscaService.formBusca" class="filtros-complementares" (ngSubmit)="busca()" >
+  <app-card>
+      <div class="cabecalho">
+          <h4>Filtro</h4>
+          <button mat-stroked-button type="button" (click)="limparFiltros()" >
+              <mat-icon>backspace</mat-icon>
+              Limpar
+          </button>
+      </div>
+      <app-paradas />
+      <hr>
+      <app-companhias />
+      <hr>
+      <app-precos />
+      <button mat-flat-button color="primary">Aplicar</button>
+  </app-card>
+</form>

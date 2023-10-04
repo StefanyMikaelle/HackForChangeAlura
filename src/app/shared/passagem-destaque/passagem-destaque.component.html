@@ -1,0 +1,9 @@
+<ul class="destaque" *ngIf="passagem">
+    <li class="titulo">{{ destacadaPor }}</li>
+    <li class="preco">
+        {{ passagem.total | currency:'BRL' }}
+    </li>
+    <li class="tempo">
+        {{ passagem.tempoVoo }}h de viagem
+    </li>
+</ul>

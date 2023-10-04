@@ -1,0 +1,33 @@
+<section class="modal">
+  <h1 mat-dialog-title>Viajante</h1>
+  <div mat-dialog-content>
+    <div class="selecao-idade">
+      <app-seletor-passageiro [formControl]="formBuscaService.obterControle('adultos')" titulo="Adultos" subtitulo="(Acima de 12 anos)"/>
+      <app-seletor-passageiro [formControl]="formBuscaService.obterControle('criancas')" titulo="Crianças" subtitulo="(Entre 2 e 11 anos)"/>
+      <app-seletor-passageiro [formControl]="formBuscaService.obterControle('bebes')" titulo="Bebês" subtitulo="(Até 2 anos)"/>
+    </div>
+    <div class="selecao-categoria">
+      <p><strong>Categoria</strong></p>
+      <mat-chip-listbox aria-label="Seleção de passagens">
+        <mat-chip-option 
+          value="Econômica"
+          [selected]="formBuscaService.formBusca.get('tipo')?.value === 'Econômica'"
+          (selectionChange)="formBuscaService.alterarTipo($event, 'Econômica')"
+        >
+          Econômica
+        </mat-chip-option>
+        <mat-chip-option 
+          value="Executiva"
+          [selected]="formBuscaService.formBusca.get('tipo')?.value === 'Executiva'"
+          (selectionChange)="formBuscaService.alterarTipo($event, 'Executiva')"
+        >
+          Executiva
+        </mat-chip-option>
+      </mat-chip-listbox>
+    </div>
+  </div>
+  <div mat-dialog-actions class="modal-actions">
+    <button color="primary" mat-flat-button mat-dialog-close>BUSCAR</button>
+  </div>
+</section>
+

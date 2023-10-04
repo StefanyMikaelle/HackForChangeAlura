@@ -1,0 +1,14 @@
+.precos {
+  mat-slider {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  .labels {
+      display: flex;
+      justify-content: space-between;
+      .label-container:last-child {
+          text-align: right;
+      }
+  }
+}

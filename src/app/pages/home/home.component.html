@@ -1,0 +1,17 @@
+<section class="homepage">
+  <div class="home-subtitle">
+    <h2 class="text-subtitle"><strong>Mão amiga,</strong> <br> sua ação nosso futuro!</h2>
+    <p class="h2-subtitle">
+      Ajude com as mais diversas formas de doação para contribuir com uma sociedade melhor para todos.
+    </p>
+  </div>
+  <app-banner src="assets/imagens/banner-homepage.jpg" alt="Banner da aplicação Jornada"></app-banner>
+  <app-container>
+    <app-form-busca (realizarBusca)="navegarParaBusca($event)"></app-form-busca>
+    <h2>Promoções</h2>
+    <app-promocoes />
+    <h2>Depoimentos</h2>
+    <app-depoimentos />
+  </app-container>
+  <app-banner src="assets/imagens/banner-homepage-rodape.png" alt="Banner da aplicação Jornada"></app-banner>
+</section>

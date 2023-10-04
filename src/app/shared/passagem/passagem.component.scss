@@ -1,0 +1,100 @@
+.passagem {
+    margin-bottom: 32px;
+
+    .conteudo-interior {
+        display: flex;
+        gap: 32px;
+
+        hr {
+            margin: 24px 0;
+        }
+
+        .ida-volta {
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+        }
+
+        .datas,
+        .origem-destino {
+            display: flex;
+            gap: 8px;
+        }
+
+        .grupo {
+            label {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 20px;
+            }
+
+            .box {
+                padding: 8px 16px;
+                border-radius: 8px;
+                background: #F7F2FA;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+
+        .dados-voo {
+            flex-grow: 1;
+        }
+
+        .orcamento {
+            width: 320px;
+
+            .preco {
+                background-color: #ECE6F0;
+                text-align: center;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                padding: 8px 0;
+            }
+
+            .detalhes {
+                ul {
+                    padding: 0;
+                    margin: 8px 0 16px 0;
+                    list-style: none;
+
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 8px;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        &.total {
+                            padding-top: 8px;
+                            border-top: 1px solid;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.homepage {
+
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+    margin-bottom: 40px;
+  }
+  h2{
+    font-size: 32px;
+  }
+  p{
+    font-size: 16px;
+  }
+}
+
+.home-subtitle{
+  margin-top: 10rem;
+  margin-left: 10rem;
+  display: flex;
+}
+.text-subtitle{
+  justify-content: center;
+  width: 20rem;
+}
+.h2-subtitle{
+  align-items: end;
+}
+

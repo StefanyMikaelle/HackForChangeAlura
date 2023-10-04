@@ -1,0 +1,21 @@
+.card-busca {
+  max-width: 320px;
+  background-color: #FEF7FF;
+  border-radius: 12px;
+  button {
+    width: 100%;
+    margin: 0 16px 48px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      margin: 12px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 32px;
+      color: #1D1B20;
+      text-align: center;
+    }
+  }
+}

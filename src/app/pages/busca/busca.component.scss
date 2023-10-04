@@ -1,0 +1,25 @@
+.busca-page {
+    app-banner {
+        margin-bottom: 40px;
+    }
+
+    .conteudo {
+        display: flex;
+        gap: 24px;
+    }
+
+    .passagens {
+        flex-grow: 1;
+
+        .destaques {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 32px;
+
+            app-card {
+                flex-grow: 1;
+            }
+        }
+    }
+}

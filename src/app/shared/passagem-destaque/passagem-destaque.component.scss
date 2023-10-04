@@ -1,0 +1,27 @@
+.destaque {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    .titulo {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+
+    .preco {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        margin: 24px 0;
+    }
+
+    .tempo {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}
