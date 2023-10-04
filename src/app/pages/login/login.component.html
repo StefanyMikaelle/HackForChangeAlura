@@ -1,18 +1,11 @@
-<app-banner
-  src="assets/imagens/banner-login.png"
-  alt="Banner da tela de login">
-</app-banner>
-<section class="login-component">
+<div class="login-component">
   <mat-card class="login">
-    <div class="image-container">
-      <figure>
-        <img src="assets/imagens/simbolo-bussola.png" alt="Símbolo de uma bússola laranja">
-      </figure>
-    </div>
-    <div class="form-container">
       <mat-card-header>
-        <mat-card-title>Login</mat-card-title>
+        <mat-card-title>Mão Amiga</mat-card-title>
+        <mat-card-subtitle>Login</mat-card-subtitle>
+        <p class="subtitulo">Continue com sua jornada de apoio e transformação.</p>
       </mat-card-header>
+      <div class="form-container">
       <form [formGroup]="loginForm">
         <mat-card-content>
           <mat-form-field appearance="outline">
@@ -26,19 +19,22 @@
             <input matInput formControlName="senha" type="password" placeholder="Digite sua senha">
             <mat-error *ngIf="loginForm.get('senha')?.errors">Senha é obrigatória</mat-error>
           </mat-form-field>
+          <p class="fogot-password">Esqueceu a senha?
+            <a routerLink="/forgotpass">Clique aqui para redefini-la.</a>
+          </p>
+          <mat-card-actions>
+            <button [disabled]="loginForm.invalid" mat-flat-button (click)="login()">
+              ENTRAR
+            </button>
+          </mat-card-actions>
         </mat-card-content>
-        <mat-card-actions>
-          <button [disabled]="loginForm.invalid" mat-flat-button color="primary" (click)="login()">
-            ACESSAR MINHA CONTA
-          </button>
-        </mat-card-actions>
-        <p>Ainda não possui conta?
-          <a routerLink="/cadastro"><strong><u>Clique aqui para se cadastrar!</u></strong></a>
+        <p class="new-account">Ainda não tem uma conta?
+          <a routerLink="/cadastro">Crie uma agora.</a>
         </p>
       </form>
     </div>
   </mat-card>
-</section>
-
+    <span class="blue"></span>
+</div>
 
 

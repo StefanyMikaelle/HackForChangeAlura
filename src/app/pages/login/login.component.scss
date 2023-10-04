@@ -1,66 +1,156 @@
-.login-component {
-  max-width: 50%;
-  min-height: 74%;
-  overflow-y: hidden;
+.login-component{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #3EA5FB;
+}
+
+mat-card{
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  height: 100vh;
+}
+
+mat-card-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+mat-card-title{
+  font-size: 48px;
+  font-weight: 500;
+}
+
+mat-card-subtitle{
+  color: black;
+  margin-top: 5rem;
+  font-size: 32px;
+}
+
+.subtitulo{
+  margin-top: 1.5rem;
+  font-size: 20px;
+  color: #57636C;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.login{
+  min-width: 50%;
+}
+
+mat-form-field{
+  width:650px;
+}
+
+mat-card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4rem;
+}
+
+mat-card-actions{
+  padding-bottom: 30%;
+}
+
+button[mat-flat-button]{
+  width: 650px;
+  color: white;
+  background-color: #3EA5FB;
+}
+
+p{
+  font-size: 16px;
+}
+
+.new-account{
+  margin-left: 5rem;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4AAB54;
+  font-weight: bold;
+
+  &:active {
+    color: #3EA5FB;
+  }
+}
+
+.fogot-password > a {
+  color: #3EA5FB;
+}
+
+mat-error{
+  color: #3EA5FB;
+}
+
+@media (max-width: 768px) {
+  .login-component {
+    flex-direction: column;
+    height: auto;
+  }
 
   .login {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 68px;
+    width: 100%;
   }
 
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .blue {
+    display: none;
   }
 
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 16px;
+  mat-card-title {
+    margin-top: 2rem;
+    margin-left: 0;
+    font-size: 36px;
+  }
 
-    mat-card-header {
-      margin-bottom: 24px;
+  mat-card-header {
+    margin-top: 2rem;
+    margin-bottom: 15px;
+    margin-left: 0;
+    text-align: center;
+  }
 
-      mat-card-title {
-        font-size: 32px;
-        font-weight: 400;
-      }
-    }
+  mat-card-content{
+    margin-left: 0;
+  }
 
-    mat-card-content {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+  p .subtitulo {
+    margin-top: 1rem;
+    margin-left: 0;
+    text-align: center;
+    font-size: 16px;
+  }
 
-    mat-card-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: normal;
+  mat-form-field {
+    width: 100%;
+  }
 
-      button {
-        margin: 0 8px;
-        margin-bottom: 16px;
-      }
-    }
+  mat-card-actions{
+    width: 100%;
+  }
 
-    p {
-      font-size: 16px;
-      font-weight: 500;
-    }
+  button[mat-flat-button] {
+    width: 100%;
+  }
 
-    a {
-      cursor: pointer;
+  p {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+    text-align: center;
+  }
 
-      &:active {
-        color: #551A8B;
-      }
-    }
+  .new-account{
+    margin-left: 0;
   }
 }
