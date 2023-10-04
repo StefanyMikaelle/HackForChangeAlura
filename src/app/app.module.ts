@@ -104,7 +104,7 @@ import { PassagemDestaqueComponent } from './shared/passagem-destaque/passagem-d
     MatRadioModule,
     MatDividerModule,
     MatCheckboxModule,
-    MatSliderModule
+    MatSliderModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

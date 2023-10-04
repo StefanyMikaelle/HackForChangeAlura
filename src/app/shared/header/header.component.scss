@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
   }
 
   a {
@@ -23,8 +22,8 @@
   }
 
   .auth-toolbar {
-    display: flex; /* Alinhar itens à direita */
-    align-items: center; /* Centralizar verticalmente */
+    display: flex;
+    align-items: center;
   }
 
   .links-toolbar > button[mat-button]{
@@ -53,11 +52,23 @@
     border-radius: 10px;
   }
 
-  @media (max-width: 600px) {
-    /* TODO */
+  @media (max-width: 1024px){
+    .logo {
+      font-size: 2rem;
+    }
 
+    button {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 0.75rem;
+    }
   }
 }
-
-
-

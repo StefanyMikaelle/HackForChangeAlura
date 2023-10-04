@@ -94,6 +94,14 @@ mat-error{
   color: #3EA5FB;
 }
 
+@media (max-width: 1024px){
+  .login-component {
+    display: flex;
+    justify-content: center;
+    height: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .login-component {
     flex-direction: column;
@@ -152,5 +160,13 @@ mat-error{
 
   .new-account{
     margin-left: 0;
+  }
+}
+
+@media (max-width: 428px) {
+  .login-component {
+    display: flex;
+    justify-content: center;
+    height: auto;
   }
 }
