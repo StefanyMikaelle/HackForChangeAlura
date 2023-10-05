@@ -60,11 +60,6 @@
                 <mat-error *ngIf="cadastroForm.get('telefone')?.errors">Telefone é obrigatório</mat-error>
               </mat-form-field>
             <div class="drop-container">
-              <app-dropdown-uf
-                label="Estado"
-                placeholder="Estado"
-                [control]="estadoControl">
-              </app-dropdown-uf>
               <mat-error class="custom-error" *ngIf="estadoControl?.errors && estadoControl?.touched">Estado é obrigatório</mat-error>
           </div>
           </div>
