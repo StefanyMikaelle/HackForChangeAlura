@@ -6,7 +6,7 @@
     <div class="links-toolbar">
       <button mat-button>Como funciona?</button>
       <button mat-button>Crie um projeto</button>
-      <button mat-button>Explore</button>
+      <button mat-button routerLink="/explore" (click)="explore()">Explore</button>
     </div>
     <div class="auth-toolbar">
       <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">

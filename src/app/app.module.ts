@@ -31,6 +31,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ExploreComponent } from './pages/explore/explore.component';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +45,7 @@ import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interc
     FormBaseComponent,
     CadastroComponent,
     PerfilComponent,
+    ExploreComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +69,7 @@ import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interc
     MatDividerModule,
     MatCheckboxModule,
     MatSliderModule,
+    MatProgressBarModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

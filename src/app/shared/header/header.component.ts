@@ -19,4 +19,8 @@ export class HeaderComponent {
     this.userService.logout();
     this.router.navigate(['/login'])
   }
+
+  explore() {
+    this.router.navigate(['/explore'])
+  }
 }
