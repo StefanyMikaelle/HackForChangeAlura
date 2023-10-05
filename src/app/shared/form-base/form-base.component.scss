@@ -1,7 +1,90 @@
 app-container {
-  width: 60%;
-  margin-bottom: 48px;
-  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #3EA5FB;
+}
+
+mat-card{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+mat-card-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 4rem;
+  margin-left: 4rem;
+}
+
+mat-card-title{
+  font-size: 48px;
+  font-weight: 500;
+}
+
+mat-card-subtitle{
+  color: black;
+  margin-top: 5rem;
+  font-size: 32px;
+}
+
+.subtitulo{
+  margin-top: 1.5rem;
+  font-size: 20px;
+  color: #57636C;
+}
+
+mat-card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 4rem;
+}
+
+mat-form-field{
+  width:650px;
+}
+
+.cadastro{
+    min-width: 50%;
+}
+
+button[mat-flat-button]{
+  width: 650px;
+  color: white;
+  background-color: #3EA5FB;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+  padding-left: 4rem;
+  margin-bottom: 20px;
+}
+
+.login{
+  margin-left: 5rem;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4AAB54;
+  font-weight: bold;
+
+  &:active {
+    color: #3EA5FB;
+  }
+}
 
   .acoesPerfil {
     display: flex;
@@ -12,46 +95,9 @@ app-container {
 
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 16px;
+    grid-gap: 10px;
     .full-width {
       grid-column: 1 / span 2;
-    }
-
-    .grid-item {
-      display: flex;
-      flex-direction: column;
-      grid-gap: 8px;
-      .radio-group {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 18px;
-      }
-
-      .drop-container {
-        margin-bottom: 16px;
-        .custom-error {
-          font-size: 12px;
-          margin-left: 12px;
-        }
-      }
-    }
-  }
-
-  mat-card-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 32px;
-    margin-top: 40px;
-  }
-
-  mat-card-actions {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 32px;
-    button {
-      margin: 0 8px;
     }
   }
 
@@ -84,16 +130,68 @@ app-container {
     margin: 40px 16px 24px 0;
   }
 
-  @media (max-width: 600px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
-
-    .full-width {
-      grid-column: 1;
+  @media (max-width: 1024px){
+    app-container {
+      display: flex;
+      justify-content: center;
+      height: auto;
     }
   }
-}
+
+  @media (max-width: 768px) {
+    app-container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .cadastro {
+      min-width: 50%;
+    }
+
+    mat-card-title {
+      margin-top: 2rem;
+      margin-left: 0;
+      font-size: 36px;
+    }
+
+    mat-card-header {
+      margin-top: 2rem;
+      margin-bottom: 15px;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    mat-card-content{
+      display: flex;
+      justify-content: flex-start;
+      margin: 0;
+      align-items: center;
+    }
+
+    p .subtitulo {
+      margin-top: 1rem;
+      margin-left: 0;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    mat-form-field {
+      width: 400px;
+    }
+
+    mat-card-actions{
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 428px) {
+    app-container {
+      display: flex;
+      justify-content: center;
+      height: auto;
+    }
+  }
+
 
 
 

@@ -14,7 +14,6 @@ export class FormBaseComponent implements OnInit{
   estadoControl = new FormControl<UnidadeFederativa | null>(null, Validators.required);
 
   @Input() perfilComponent: boolean = false;
-  @Input() titulo: string = 'Crie sua conta';
   @Input() textoBotao: string = 'CADASTRAR';
   @Output() acaoClique: EventEmitter<any> = new EventEmitter<any>()
   @Output() sair: EventEmitter<any> = new EventEmitter<any>()
@@ -58,4 +57,6 @@ export class FormBaseComponent implements OnInit{
   deslogar() {
     this.sair.emit();
   }
+
+  disableSelect = new FormControl(false);
 }
