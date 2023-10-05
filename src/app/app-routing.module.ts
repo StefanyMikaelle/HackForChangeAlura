@@ -25,6 +25,10 @@ const routes: Routes = [
     component: PerfilComponent,
     canActivate: [authGuard]
   },
+  {
+    path: 'explore',
+    component: ExploreComponent,
+  },
 ];
 
 @NgModule({
