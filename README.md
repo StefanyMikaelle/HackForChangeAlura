@@ -13,10 +13,10 @@ Apesar de inicialmente o foco da plataforma é atender a instituição Passos M�
 
 Nesse primeiro momento, a MVP terá como funcionalidades:
 
-1 - As ONGs cadastrarem seus projetos e os recursos que estão precisando.
-2 - Os voluntários se cadastrarem os tipos de serviços que querem contribuir.
-3 - Ter um dashboard de metas das necessidades das ONGs.
-4 - Além do Login e Cadastro das ONG's e Voluntários.
+1. As ONGs cadastrarem seus projetos e os recursos que estão precisando.
+2. Os voluntários se cadastrarem os tipos de serviços que querem contribuir.
+3. Ter um dashboard de metas das necessidades das ONGs.
+4. Além do Login e Cadastro das ONG's e Voluntários.
 
 O [Figma dessa aplicação você encontra aqui](https://www.figma.com/file/VRv7XkOsUUQwa7Fs5SO6wS/Hack-For-Change---Projeto-M%C3%A3o-Amiga?type=design&node-id=34-2&mode=design&t=WOeaXn16b5vTyX5M-0).
 
