@@ -5,20 +5,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 110px;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-    align-content: center;
-    margin-left: 15px;
-    margin-top: 10px;
-  }
-
-  .logo{
+  .logo-box > button[mat-button]{
     color: #3EA5FB;
     font-size: 36px;
     font-weight: 500;
+    margin-left: 4rem;
+  }
+
+  .no-click-shadow {
+    box-shadow: none !important;
   }
 
   .auth-toolbar {
@@ -26,9 +24,18 @@
     align-items: center;
   }
 
+  .links-toolbar{
+    display: flex;
+    justify-content: center;
+  }
+
   .links-toolbar > button[mat-button]{
     justify-content: center;
     margin: 15px;
+  }
+
+  .links-toolbar > button[mat-button].active-button {
+    color: #3EA5FB;
   }
 
   button{
@@ -39,7 +46,7 @@
     color: #57636C;
   }
 
-  button[routerlink="/login"]{
+  button[mat-raised-button]{
     background-color: #3EA5FB;
     color: white;
     border-radius: 10px;
@@ -53,7 +60,7 @@
   }
 
   @media (max-width: 1024px){
-    .logo {
+    .logo-box > button[mat-button] {
       font-size: 2rem;
     }
 
@@ -63,7 +70,7 @@
   }
 
   @media (max-width: 768px) {
-    .logo {
+    .logo-box > button[mat-button] {
       font-size: 1rem;
     }
 

@@ -1,0 +1,58 @@
+.card-projeto {
+  max-width: 400px;
+  border-radius: 12px;
+  border: 1px solid #57636C;
+  margin: 15px;
+}
+
+img {
+  padding-top: 20px;
+  max-width: 430px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+
+.card-header {
+  margin-top: -10px !important;
+}
+
+.card-content{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+mat-card-subtitle{
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.avatar {
+  background-image: url('https://passosmagicos.org.br/wp-content/uploads/2020/10/Passos-magicos-icon-cor.png');
+  background-size: cover;
+  margin-bottom: 0;
+}
+
+mat-progress-bar{
+  margin-bottom: 15px;
+}
+
+p{
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #57636C;
+}
+
+mat-card-actions{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+

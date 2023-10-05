@@ -1,9 +1,7 @@
-<app-container>
-  <mat-card>
-    <div class="cadastro">
+<div class="cadastro-component">
+  <mat-card class="cadastro">
     <form [formGroup]="cadastroForm">
         <mat-card-header>
-          <mat-card-title>Mão Amiga</mat-card-title>
         <mat-card-subtitle>Cadastrar</mat-card-subtitle>
         <p class="subtitulo">Junte-se à nossa comunidade e faça a diferença!</p>
       </mat-card-header>
@@ -17,7 +15,6 @@
         </div>
       </section>
       <mat-card-content>
-        <div class="grid-container">
           <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
             <input matInput formControlName="nome" placeholder="Nome">
@@ -49,25 +46,23 @@
                 <option value="Instituição">Instituição</option>
               </select>
             </mat-form-field>
-          </div>
         <mat-checkbox *ngIf="!perfilComponent" formControlName="aceitarTermos" color="primary" class="full-width">Li e aceito os termos e condições deste cadastro *</mat-checkbox>
         <mat-error *ngIf="cadastroForm.get('aceitarTermos')?.invalid && cadastroForm.get('aceitarTermos')?.dirty">
           Você precisa aceitar os termos e condições para efetuar o cadastro
         </mat-error>
+        <mat-card-actions>
+          <button mat-flat-button
+            [disabled]="cadastroForm.invalid"
+            (click)="executarAcao()"
+            [class.perfil-button]="perfilComponent"
+            color="primary"
+          >{{ textoBotao }}
+          </button>
+        </mat-card-actions>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-flat-button
-          [disabled]="cadastroForm.invalid"
-          (click)="executarAcao()"
-          [class.perfil-button]="perfilComponent"
-          color="primary"
-        >{{ textoBotao }}
-        </button>
-      </mat-card-actions>
       <p class="login">Já tem uma conta?
         <a routerLink="/login">Acesse agora.</a>
       </p>
     </form>
-  </div>
   </mat-card>
-</app-container>
+</div>

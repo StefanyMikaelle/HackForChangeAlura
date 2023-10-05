@@ -33,6 +33,10 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { AutenticacaoInterceptor } from './core/interceptors/autenticacao.interceptor';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { BannerComponent } from './shared/banner/banner.component';
+import { CardComponent } from './shared/card/card.component';
+import { CardProjetoComponent } from './shared/card-projeto/card-projeto.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 @NgModule({
@@ -46,6 +50,10 @@ import { ExploreComponent } from './pages/explore/explore.component';
     CadastroComponent,
     PerfilComponent,
     ExploreComponent,
+    BannerComponent,
+    CardComponent,
+    CardProjetoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

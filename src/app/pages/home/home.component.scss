@@ -1,30 +1,37 @@
-.homepage {
-
-  .card-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 16px;
-    margin-bottom: 40px;
-  }
-  h2{
-    font-size: 32px;
-  }
-  p{
-    font-size: 16px;
-  }
-}
-
-.home-subtitle{
-  margin-top: 10rem;
-  margin-left: 10rem;
+.card-wrapper {
   display: flex;
-}
-.text-subtitle{
+  flex-wrap: wrap;
   justify-content: center;
-  width: 20rem;
-}
-.h2-subtitle{
-  align-items: end;
+  align-items: center;
 }
 
+.header-content{
+  display: flex;
+  justify-content: center;
+  height: 150px;
+}
+
+.header-content p{
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+app-card-projeto {
+  flex-basis: calc(33.33% - 200px);
+}
+
+.more-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[mat-raised-button]{
+  background-color: #3EA5FB;
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  width: 300px;
+}

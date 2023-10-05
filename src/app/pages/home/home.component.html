@@ -1,8 +1,14 @@
 <section class="homepage">
-  <div class="home-subtitle">
-    <h2 class="text-subtitle"><strong>Mão amiga,</strong> <br> sua ação nosso futuro!</h2>
-    <p class="h2-subtitle">
-      Ajude com as mais diversas formas de doação para contribuir com uma sociedade melhor para todos.
-    </p>
+  <app-banner></app-banner>
+  <div class="header-content">
+    <p>Projetos em ação</p>
   </div>
+  <div class="card-wrapper">
+  <app-card-projeto></app-card-projeto>
+  <app-card-projeto></app-card-projeto>
+</div>
+<div class="more-button">
+  <button mat-raised-button routerLink="/explore" routerLinkActive="active-button" (click)="explore()">Ver mais</button>
+</div>
+<app-footer></app-footer>
 </section>

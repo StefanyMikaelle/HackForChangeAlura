@@ -25,4 +25,8 @@ export class HomeComponent implements OnInit {
   navegarParaBusca(ev: any) {
     this.router.navigate(['busca']);
   }
+
+  explore() {
+    this.router.navigate(['/explore'])
+  }
 }

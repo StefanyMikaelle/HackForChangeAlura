@@ -1,14 +1,13 @@
-app-container {
+.cadastro-component{
   display: flex;
   flex-direction: row;
-  height: 100vh;
   background-color: #3EA5FB;
+  min-height: 100vh;
 }
 
 mat-card{
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 form{
@@ -21,7 +20,7 @@ mat-card-header{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-left: 4rem;
 }
 
@@ -54,8 +53,9 @@ mat-form-field{
 }
 
 .cadastro{
-    min-width: 50%;
+  min-width: 50%;
 }
+
 
 button[mat-flat-button]{
   width: 650px;
@@ -64,9 +64,6 @@ button[mat-flat-button]{
 }
 
 mat-card-actions {
-  display: flex;
-  justify-content: center;
-  padding-left: 4rem;
   margin-bottom: 20px;
 }
 
@@ -91,14 +88,6 @@ a {
     flex-direction: row;
     justify-content: space-between;
     margin: 12px 16px 12px 0;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-gap: 10px;
-    .full-width {
-      grid-column: 1 / span 2;
-    }
   }
 
   mat-divider {
@@ -131,7 +120,7 @@ a {
   }
 
   @media (max-width: 1024px){
-    app-container {
+    .cadastro-component {
       display: flex;
       justify-content: center;
       height: auto;
@@ -139,7 +128,7 @@ a {
   }
 
   @media (max-width: 768px) {
-    app-container {
+    .cadastro-component {
       flex-direction: column;
       height: auto;
     }
@@ -162,11 +151,9 @@ a {
     }
 
     mat-card-content{
-      display: flex;
-      justify-content: flex-start;
-      margin: 0;
-      align-items: center;
+      margin-left: 0;
     }
+
 
     p .subtitulo {
       margin-top: 1rem;
@@ -176,19 +163,39 @@ a {
     }
 
     mat-form-field {
-      width: 400px;
+      width: 100%;
     }
 
     mat-card-actions{
-      padding: 0;
+      width: 100%;
+    }
+
+    button[mat-flat-button] {
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .login{
+      margin-left: 0;
+      font-size: 16px;
     }
   }
 
   @media (max-width: 428px) {
-    app-container {
+    .cadastro-component {
       display: flex;
       justify-content: center;
       height: auto;
+    }
+
+    .login{
+      margin-left: 0;
+      font-size: 16px;
     }
   }
 

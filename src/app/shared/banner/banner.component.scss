@@ -1,0 +1,20 @@
+.banner-component{
+  display: flex;
+  align-items: center;
+  background-color: #3EA5FB;
+  height: 300px;
+}
+
+.banner-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 5rem;
+}
+
+p{
+  font-size: 48px;
+  font-weight: 500;
+  color: white;
+  padding-top: 25px;
+}
