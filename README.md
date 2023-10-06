@@ -33,9 +33,11 @@ E muito mais!
 
 ## 🛠️ Abrir e rodar o projeto
 
-Para abrir e rodar o projeto, execute `npm i` para instalar as dependências e `ng serve` para iniciar o projeto.
+Para abrir e rodar o front do projeto, execute `npm i` para instalar as dependências e `npm start` para iniciar o projeto.
 
 Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
+
+Para rodar o servidor do Back End, abra separadamente a pasta, no terminar dentro da pasta Back-End digite `npm i` e `node index.js`.
 
 
 ## 📚 Mais informações do projeto
