@@ -13,15 +13,15 @@ export class CadastroService {
   constructor(private http: HttpClient) { }
 
   cadastrar(pessoaUsuaria: PessoaUsuaria): Observable<PessoaUsuaria> {
-    return this.http.post<PessoaUsuaria>(`${this.apiUrl}/auth/cadastro`, pessoaUsuaria);
+    return this.http.post<PessoaUsuaria>(`${this.apiUrl}/usuarios/cadastrar`, pessoaUsuaria);
   }
 
   buscarCadastro(): Observable<PessoaUsuaria> {
-    return this.http.get<PessoaUsuaria>(`${this.apiUrl}/auth/perfil`);
+    return this.http.get<PessoaUsuaria>(`${this.apiUrl}/usuarios/perfil`);
   }
 
   editarCadastro(pessoaUsuaria: PessoaUsuaria): Observable<PessoaUsuaria> {
-    return this.http.patch<PessoaUsuaria>(`${this.apiUrl}/auth/perfil`, pessoaUsuaria);
+    return this.http.patch<PessoaUsuaria>(`${this.apiUrl}/usuarios/perfil`, pessoaUsuaria);
   }
 
 }
