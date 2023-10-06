@@ -3,10 +3,11 @@
   <div class="header-content">
     <p>Projetos em ação</p>
   </div>
-  <div class="card-wrapper">
-  <app-card-projeto></app-card-projeto>
-  <app-card-projeto></app-card-projeto>
-</div>
+  <div class="inline-container">
+    <div *ngFor="let item of items" class="card">
+      <app-card-projeto></app-card-projeto>
+    </div>
+  </div>
 <div class="more-button">
   <button mat-raised-button routerLink="/explore" routerLinkActive="active-button" (click)="explore()">Ver mais</button>
 </div>

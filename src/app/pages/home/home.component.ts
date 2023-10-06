@@ -8,6 +8,7 @@ import { PromocaoService } from 'src/app/core/services/promocao.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  items = ['Item 1', 'Item 2', 'Item 3'];
   constructor(
     private servicoPromocao: PromocaoService,
     private router: Router

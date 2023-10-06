@@ -35,3 +35,19 @@ button[mat-raised-button]{
   font-weight: 500;
   width: 300px;
 }
+
+.inline-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-left: 85px;
+}
+
+.inline-container > div {
+  margin-right: 10px;
+}
+
+.text{
+  margin-left: 95px;
+}
+

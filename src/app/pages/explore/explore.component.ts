@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import {MatIconRegistry, MatIconModule} from '@angular/material/icon';
+
+
 const THUMBUP_ICON =
   `
   <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px">
@@ -22,6 +24,7 @@ const SHARE_ICON =
   styleUrls: ['./explore.component.scss']
 })
 export class ExploreComponent {
+  items = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
   constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     // Note that we provide the icon here as a string literal here due to a limitation in
     // Stackblitz. If you want to provide the icon from a URL, you can use:
@@ -29,4 +32,6 @@ export class ExploreComponent {
     iconRegistry.addSvgIconLiteral('thumbs-up', sanitizer.bypassSecurityTrustHtml(THUMBUP_ICON));
     iconRegistry.addSvgIconLiteral('SHARE', sanitizer.bypassSecurityTrustHtml(SHARE_ICON));
   }
+
+
 }
