@@ -6,6 +6,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { authGuard } from './core/guards/auth.guard';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { ComoFuncionaComponent } from './pages/como-funciona/como-funciona.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'explore',
     component: ExploreComponent,
+  },
+  {
+    path: 'como-funciona',
+    component: ComoFuncionaComponent,
   },
 ];
 

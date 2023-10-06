@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  items = ['Item 1', 'Item 2', 'Item 3'];
   constructor(
     private router: Router
   ) {

@@ -1,3 +1,16 @@
-<app-card-projeto></app-card-projeto>
-<app-card-projeto></app-card-projeto>
-<app-card-projeto></app-card-projeto>
+<section>
+  <div class="text">
+    <h2>Descubra projetos em ação</h2>
+    <p>Conheça as iniciativas que estão transformando vidas.</p>
+  </div>
+
+  <div class="inline-container">
+    <div *ngFor="let item of items" class="card">
+      <app-card-projeto></app-card-projeto>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>
+
+
+

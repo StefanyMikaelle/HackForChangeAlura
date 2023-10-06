@@ -1,0 +1,39 @@
+<section>
+  <div class="text">
+    <h2>Como funciona?</h2>
+    <p>Bem-vindo à plataforma Mão Amiga!
+      Aqui, explicaremos como nossa plataforma funciona
+      tanto para as instituições que precisam de doações
+      quanto para os indivíduos que desejam contribuir.
+      Com Mão Amiga, todos podem desempenhar um papel na transformação de vidas.</p>
+  </div>
+  <div class="inline-container">
+    <mat-card class="card" >
+      <mat-card-content>
+        <h2 class="example-h2">Para representantes de instituições</h2>
+
+        <section class="example-section">
+          <mat-checkbox class="example-margin" [(ngModel)]="checked" value="true">Cadastro da instituição: para começar, sua instituição precisa se cadastrar na plataforma.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Criando projetos: para solicitar doações com sucesso, você precisará criar projetos específicos na plataforma.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Tipos de doações: você pode especificar os tipos de doações que sua instituição aceita, como doações monetárias, doações de tempo, doações de conhecimento ou doações de influência.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Conexão com doadores: uma vez que seu projeto esteja ativo na plataforma, os doadores interessados poderão encontrar sua instituição. Esteja pronto para responder a perguntas e fornecer informações adicionais sobre como os doadores podem ajudar.</mat-checkbox>
+        </section>
+
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="card" >
+      <mat-card-content>
+        <h2 class="example-h2">Para potenciais doadores</h2>
+
+        <section class="example-section">
+          <mat-checkbox class="example-margin" [(ngModel)]="checked" value="true">Cadastro do doador: comece criando uma conta, isso permitirá que você acesse todas as funcionalidades da plataforma.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Descubra projetos: navegue pelos projetos. Você encontrará informações detalhadas sobre os projetos que estão buscando apoio.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Tipos de doações: você pode especificar os tipos de doações que sua instituição aceita, como doações monetárias, doações de tempo, doações de conhecimento ou doações de influência.</mat-checkbox>
+          <mat-checkbox class="example-margin" [(ngModel)]="checked">Realizando doações: após escolher uma causa que ressoa com você, siga as instruções para fazer sua doação. Isso pode envolver transferências de dinheiro, compromissos de voluntariado, ou compartilhamento de conhecimento e influência.</mat-checkbox>
+        </section>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

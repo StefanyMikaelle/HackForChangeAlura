@@ -7,11 +7,11 @@
 
 img {
   padding-top: 20px;
-  max-width: 430px;
+  max-width: 500px;
   max-height: 200px;
-  width: auto;
+  width: 90%;
   height: auto;
-  margin: auto;
+  margin: auto auto auto 16px;
   display: block;
 }
 
@@ -38,13 +38,14 @@ mat-card-subtitle{
 }
 
 mat-progress-bar{
-  margin-bottom: 15px;
+  width: 90%;
+  margin: 16px;
 }
 
 p{
   font-size: 20px;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 16px;
   color: #57636C;
 }
 
