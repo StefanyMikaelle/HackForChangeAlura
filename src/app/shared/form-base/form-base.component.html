@@ -1,20 +1,20 @@
 <div class="cadastro-component">
   <mat-card class="cadastro">
     <form [formGroup]="cadastroForm">
-        <mat-card-header>
+        <mat-card-header *ngIf="!perfilComponent">
         <mat-card-subtitle>Cadastrar</mat-card-subtitle>
         <p class="subtitulo">Junte-se à nossa comunidade e faça a diferença!</p>
       </mat-card-header>
       <section>
         <div class="acoesPerfil" *ngIf="perfilComponent">
-          <h2>Dados pessoais</h2>
+          <h2>Meu perfil</h2>
           <button (click)="deslogar()" mat-stroked-button color="primary">
             <mat-icon>logout</mat-icon>
             DESLOGAR
           </button>
         </div>
       </section>
-      <mat-card-content>
+      <mat-card-content *ngIf="!perfilComponent">
           <mat-form-field appearance="outline">
             <mat-label>Nome</mat-label>
             <input matInput formControlName="nome" placeholder="Nome">
@@ -28,7 +28,7 @@
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Senha</mat-label>
-              <input matInput formControlName="senha" type="senha" placeholder="Digite sua senha">
+              <input matInput formControlName="senha" type="password" placeholder="Digite sua senha">
               <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['required']">Senha é obrigatória</mat-error>
               <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['minlength']">Senha deve ter pelo menos 3 caracteres</mat-error>
             </mat-form-field>
@@ -60,7 +60,7 @@
           </button>
         </mat-card-actions>
       </mat-card-content>
-      <p class="login">Já tem uma conta?
+      <p *ngIf="!perfilComponent" class="login">Já tem uma conta?
         <a routerLink="/login">Acesse agora.</a>
       </p>
     </form>

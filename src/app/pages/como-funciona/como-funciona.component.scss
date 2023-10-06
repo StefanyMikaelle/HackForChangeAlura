@@ -1,11 +1,38 @@
 .text{
-  margin-left: 95px;
+  margin-top: 25px;
+  margin-left: 6rem;
 }
+
+h2{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+p{
+  margin-top: 25px;
+  font-size: 20px;
+}
+
+a{
+  color: #3EA5FB;
+}
+
 .inline-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-left: 85px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 25px;
+  height: 500px;
+}
+
+mat-card-content{
+  margin: 15px;
+  padding-right: 15px;
+}
+
+mat-card-content > h2{
+  font-size: 24px;
+  text-align: center;
 }
 
 .inline-container > div {
@@ -15,4 +42,25 @@
 .card{
   width: 35%;
   margin-right: 20px;
+}
+
+li{
+  list-style: none;
+}
+
+ul{
+  padding-top: 15px;
+}
+
+ul > a{
+  color: black;
+  font-weight: bold;
+}
+
+mat-icon{
+  padding-top: 5p;
+}
+
+app-footer{
+  margin-top: 50px;
 }

@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Jornada Milhas')
-    .setDescription('Jornada  Milhas API')
+    .setTitle('Mao Amiga')
+    .setDescription('Mao Amiga API')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);

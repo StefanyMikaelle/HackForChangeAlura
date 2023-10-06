@@ -9,10 +9,8 @@
       <button mat-button routerLink="/explore" routerLinkActive="active-button" (click)="explore()">Explore</button>
     </div>
     <div class="auth-toolbar">
-      <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">
-        <a routerLink="/perfil">
-          <img src="assets/icones/user.png" alt="Ícone da pessoa usuária">
-        </a>
+      <ng-container class="login-toolbar" *ngIf="user$ | async as pessoaUsuaria; else login">
+        <button routerLink="/perfil" mat-raised-button>MEU PERFIL</button>
         <button mat-stroked-button color="primary" (click)="logout()">SAIR</button>
       </ng-container>
       <ng-template #login>

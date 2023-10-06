@@ -14,7 +14,6 @@ export class UsersService {
   async findOne(email: string) {
     return this.repository.findOne({
       where: { email },
-      relations: ['estado'],
     });
   }
   create(userDto: UserDto) {

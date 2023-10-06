@@ -53,6 +53,15 @@
     margin: 10px;
   }
 
+  .login-toolbar{
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-perfil{
+    padding-right: 10px;
+  }
+
   .mat-mdc-outlined-button:not(:disabled) {
     border-color: #3EA5FB;
     color: #3EA5FB;

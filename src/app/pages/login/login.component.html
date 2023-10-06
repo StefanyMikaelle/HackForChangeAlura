@@ -15,7 +15,7 @@
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
-            <input matInput formControlName="senha" type="senha" placeholder="Digite sua senha">
+            <input matInput formControlName="senha" type="password" placeholder="Digite sua senha">
             <mat-error *ngIf="loginForm.get('senha')?.errors">Senha é obrigatória</mat-error>
           </mat-form-field>
           <p class="fogot-password">Esqueceu a senha?

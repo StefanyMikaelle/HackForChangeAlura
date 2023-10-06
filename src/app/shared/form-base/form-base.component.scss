@@ -96,11 +96,9 @@ a {
     margin-top: 24px;
   }
 
-  h2 {
-    font-weight: 400;
-    font-size: 22px;
-    color: #1D1B20;
-    margin-left: 16px;
+  section{
+    display: flex;
+    justify-content: center;
   }
 
   .btn-editar {
@@ -113,10 +111,18 @@ a {
     }
   }
 
-  .acessoPerfil {
+  .acoesPerfil {
     display: flex;
-    justify-content: space-between;
-    margin: 40px 16px 24px 0;
+    align-items: center;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 500;
+    color: #1D1B20;
+    margin-top: 20px;
+    margin-right: 5rem;
   }
 
   @media (max-width: 1024px){
