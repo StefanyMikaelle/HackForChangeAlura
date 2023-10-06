@@ -1,0 +1,390 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+ 
+       
+        <meta charset="utf-8">
+        <style>
+
+            .card {
+                color: white;
+                display: grid;
+                min-height: 250px;
+                grid-template-columns: 100%;
+                grid-template-rows: 10% 70% 20%;
+                border-radius: 15px;
+                background: rgb(255 255 255 / 45%);
+            }
+
+            body {
+                margin: 0;
+                display: flex;
+                font-family: 'Ubuntu' !important;
+                background: linear-gradient(180.3deg, rgb(132 212 213) 5.5%, rgb(51 139 224) 90.2%);
+            }
+
+            .side-bar-header {
+                color: white;
+                background: linear-gradient(178deg, rgba(201, 234, 252, 0.51) 14.9%, rgba(139, 192, 216, 0.73) 80%);
+                text-align: center;
+                box-shadow: -2px 12px 29px -4px rgba(0,0,0,0.75);
+            }
+
+            .sider-bar {
+                box-shadow: 26px 23px 29px -11px rgb(255 255 255 / 35%);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 300px;
+            }
+
+            .centralizar-conteudo-interno {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .sider-bar-body {
+                padding-top: 50px;
+                color: white !important;
+            }
+
+            .menu-item {
+                transition: 0.5s ease all;
+                padding: 20px;
+            }
+
+            .menu-item:hover {
+                background: rgba(255, 255, 255, 0.178);
+            }
+
+            hr {
+                color: white;
+                background: white;
+                border: 1px solid white;
+            }
+
+            .corpo-pagina {
+                padding: 15px;
+                width: calc(100vw - 300px);
+            }
+
+            .card-header {
+                font-size: 21px;
+                height: 100%;
+                padding: 10px;
+                border-radius: 15px 15px 0px 0px;
+                background: rgb(111, 223, 241);
+            }
+
+            .card-body {
+                width: 100%;
+                height: 100%;
+                padding-top: 15px;
+                padding-left: 10px;
+                padding-right: 10px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: column;
+            }
+
+            .linha {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: row;
+            }
+
+            .linha-child {
+                margin-right: 10px;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .linha-child > input {
+                height: 40px;
+                padding: 10px;
+                outline: none;
+                border: 1px solid #c3bebe;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+
+            .linha-child > label {
+                font-size: 25px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .card-footer {
+                padding: 10px;
+            }
+            
+            div.card-footer > button {
+                margin-left: 10px;
+            }
+
+            .salvar {
+                transition: 0.35s ease all;
+                padding: 10px;
+                color: white;
+                background: #95d6f4;
+                border: none;
+                outline: none;
+                height: 40px;
+                border-radius: 6px;
+                width: 80px;
+            }
+
+            .salvar:hover {
+                background: #7cb8d4;
+            }
+
+            .cancelar {
+                transition: 0.35s ease all;
+                padding: 10px;
+                color: white;
+                background: #56d3e0;
+                border: none;
+                outline: none;
+                height: 40px;
+                border-radius: 6px;
+                width: 80px;
+            }
+
+            .cancelar:hover {
+                background: #448c80;
+            }
+        </style>
+        <title>Formulário de Jogo</title>
+    </head>
+    <body>
+        <div id="side-bar"class="sider-bar">
+            <div class="centralizar-conteudo-interno side-bar-header">
+                <h1>Menu</h1>
+            </div>
+            <div class="sider-bar-body">
+                <div class="menu-item" onclick="voltarPraPaginaInicial()">
+                    <span>Listagem</span>
+                    <hr>
+                </div>
+                <div class="menu-item">
+                    <span>Formulário de jogos</span>
+                    <hr>
+                </div>
+                <div class="menu-item">
+                    <span>Deslogar</span>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="corpo-pagina">
+            <div id="msgErro" style="background-color: red; color: white; font-size: 40px;">
+                
+            </div>
+            <div class="card">
+                <div class="card-header"> 
+                    <span>Formulário de Jogos</span>
+                </div>
+                <div class="card-body">
+                    <div class="linha">
+                        <div class="linha-child">
+                            <label>Nome</label>
+                            <input id="nome" name="nome" type="text">
+                        </div>
+                        <div class="linha-child">
+                            <label>Desenvolvedora</label>
+                            <input id="desenvolvedora" name="desenvolvedora" type="text">
+                        </div>
+                    </div>
+                    <div class="linha">
+                        <div class="linha-child">
+                            <label>Nota</label>
+                            <input id="nota" name="nota" type="number" max="10" min="0">
+                        </div>
+                        <div class="linha-child">
+                            <label>Plataforma</label>
+                            <div style="display: block;">
+                                <label>Playstation 5</label>
+                                <input name="ps5" id="ps5" type="checkbox" onclick="selecionaPlataforma(1)">
+                                <label>Playstation 4</label>
+                                <input name="ps4" id="ps4" type="checkbox" onclick="selecionaPlataforma(2)">
+                                <label>Xbox One</label>
+                                <input name="xone" id="xone" type="checkbox" onclick="selecionaPlataforma(5)">
+                                <label>Nintendo Switch</label>
+                                <input name="sw" id="sw" type="checkbox" onclick="selecionaPlataforma(3)">
+                                <label>PC</label>
+                                <input name="pc" id="pc" type="checkbox" onclick="selecionaPlataforma(4)">
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="salvar" onclick="salvar()"><span>Salvar</span></button>
+                    <button class="cancelar" onclick="cancelar()"><span>Cancelar</span></button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+        <script>
+            const SERVER_API = 'http://localhost:4500/api/gameranking/'
+            const JOGOS_LISTAGEM_PAGINA = 'jogos/pagina-inicial'
+            const JOGOS_CONSULTAR_PELO_ID = 'jogos/consultar-by-id/'
+            const JOGOS_API_CADASTRO = 'jogos/cadastrar'
+            const JOGOS_API_ATUALIZAR = 'jogos/atualizar'
+
+            const listaBotoesPlataformas = [
+                {
+                    idDaPlataforma: 1,
+                    idBotao: 'ps5',
+                    pressionado: false
+                },
+                {
+                    idDaPlataforma: 2,
+                    idBotao: 'ps4',
+                    pressionado: false
+                },
+                {
+                    idDaPlataforma: 3,
+                    idBotao: 'sw',
+                    pressionado: false
+                },
+                {
+                    idDaPlataforma: 4,
+                    idBotao: 'pc',
+                    pressionado: false
+                },
+                {
+                    idDaPlataforma: 5,
+                    idBotao: 'xone',
+                    pressionado: false
+                },
+            ]
+            
+            const inputNome = document.getElementById('nome');
+            const inputDesenvolvedora = document.getElementById('desenvolvedora');
+            const inputNota = document.getElementById('nota')
+            const divMensagemErro = document.getElementById('msgErro')
+            const mensagemDeErro = 'ERRO! Um jogo deve ter um nome'
+            let idDaPlataforma = null
+            let idDoJogo = null
+
+            window.onload = () => {
+                const idJogo = window.location.href.split('pagina-edicao/')[1]
+
+                axios.get(SERVER_API + JOGOS_CONSULTAR_PELO_ID + idJogo)
+                .then(
+                    respostaDoServidor => {
+                        idDoJogo = idJogo
+                        const jogo =  respostaDoServidor.data;
+                        inputNome.value = jogo.nome
+                        inputDesenvolvedora.value = jogo.desenvolvedora
+                        inputNota.value = jogo.nota
+                        if (jogo.plataforma_id) {
+                            const botaoASerPressionado = listaBotoesPlataformas.filter(botao => botao.id = jogo.plataforma_id )[0]
+                            document.getElementById(botaoASerPressionado.idBotao).click()
+                            idDaPlataforma = jogo.plataforma_id
+                        }
+                    }  
+                )
+                .catch(
+                    erro => {
+                        console.log(erro)
+                    }
+                )
+            }
+
+            function selecionaPlataforma(id) {
+
+                for (let index = 0; index < listaBotoesPlataformas.length; index++) {
+                    const botaoNaPosicaoIndexAtual = listaBotoesPlataformas[index]
+
+                    if (botaoNaPosicaoIndexAtual.idDaPlataforma === id) {
+                        listaBotoesPlataformas[index].pressionado = !listaBotoesPlataformas[index].pressionado
+
+                        if (listaBotoesPlataformas[index].pressionado) {
+                            idDaPlataforma = id;
+                        } else {
+                            idDaPlataforma = null;
+                        }
+                    }   
+                }
+
+                const listaBotoesPressionadosAtualmente = listaBotoesPlataformas.filter(botao => botao.pressionado)
+
+                if (listaBotoesPressionadosAtualmente.length > 1) {
+                    for (let index = 0; index < listaBotoesPressionadosAtualmente.length; index++) {
+                        const botao = listaBotoesPressionadosAtualmente[index]
+                        document.getElementById(botao.idBotao).click()
+                        idDaPlataforma = null
+                    }
+                }
+            }
+
+            function salvar() {
+                limpaMensagemDeErro()
+                const jogoASerSalvo = {
+                    nome: inputNome.value,
+                    nota: inputNota.value,
+                    desenvolvedora: inputDesenvolvedora.value,
+                    plataforma_id: idDaPlataforma
+                }
+
+                if (!jogoASerSalvo.nome) {
+                    divMensagemErro.textContent = mensagemDeErro
+                    return
+                }
+                
+                if (!idDoJogo) {
+                    axios.post(SERVER_API + JOGOS_API_CADASTRO, jogoASerSalvo)
+                    .then(resposta => {
+                        voltarPraPaginaInicial()
+                    })
+                    .catch(erro => {
+                        console.log(erro)
+                    })
+                } else {
+                    jogoASerSalvo.id = idDoJogo
+                    axios.put(SERVER_API + JOGOS_API_ATUALIZAR, jogoASerSalvo)
+                    .then(resposta => {
+                        voltarPraPaginaInicial()
+                    })
+                    .catch(erro => {
+                        console.log(erro)
+                    })
+                }
+                
+            }
+
+            function limpaMensagemDeErro() {
+                divMensagemErro.textContent = null
+            }
+
+            function cancelar() {
+                inputNome.value = null
+                inputNota.value = null
+                inputDesenvolvedora.value = null
+                idDaPlataforma = null
+                limpaMensagemDeErro()
+                const listaBotoesPressionadosAtualmente = listaBotoesPlataformas.filter(botao => botao.pressionado)
+                for (let index = 0; index < listaBotoesPressionadosAtualmente.length; index++) {
+                    const botao = listaBotoesPressionadosAtualmente[index]
+                    document.getElementById(botao.idBotao).click()
+                }
+            }
+
+            function voltarPraPaginaInicial() {
+                window.open(SERVER_API + JOGOS_LISTAGEM_PAGINA)
+                document.documentElement.innerHTML = ''
+                window.close()
+            }
+        </script>
+    </body>
+</html>

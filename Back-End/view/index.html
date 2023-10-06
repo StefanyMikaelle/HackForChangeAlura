@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+        <!--IMPORTAÇÃO DOS ESTILOS CSS-->
+
+        <link rel="stylesheet" href="estilizacao.css">
+
+       
+        <meta charset="utf-8">
+        <title>Aplicação de Exemplo</title>
+    </head>
+    <body>
+        <div id="conteudoPagina" class="conteudoPagina">
+            <div id="cartaoDeLogin" class="cartaoDeLogin center-absolute">
+                <div class="cabecalhoCartaoDeLogin centralizadoTotalmente">
+                    <span>Login do Sistema</span>
+                </div>
+                <div class="centralizadoTotalmente jogar-pra-cima" style="padding: 10px;  flex-direction: column !important;">
+                    
+                    <div id="containerMensagemLogin" class="campoFormulario centralizadoTotalmente" style="flex-direction: column !important;">
+                        <span id="mensagemLogin"></span>
+                    </div>
+
+
+                    <div class="campoFormulario centralizadoTotalmente" style="flex-direction: column !important;">
+                        <label><span>Acesso</span></label>
+                        <input id="email" name="email" type="text" placeholder="Insira seu acesso" required>
+                    </div>
+                    <div class="campoFormulario centralizadoTotalmente" style="flex-direction: column !important;">
+                        <label><span>Senha</span></label>
+                        <input placeholder="***********" id="senha" name="senha" type="password" required>
+                    </div>
+                    <div class="campoFormulario centralizadoTotalmente">
+                        <button id="botaoLogin" class="botao-login"><span>Acessar</span></button>
+                    </div>
+                </div>
+                    
+            
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+        <script type="module" src="codigoLoginPage.js"></script>
+    </body>
+</html>
