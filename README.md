@@ -31,11 +31,21 @@ Se liga nessa lista de tudo que usaremos nesse curso:
 
 E muito mais!
 
-## 🛠️ Abrir e rodar o projeto
+## 🛠️ Abrir e rodar o projeto FRONTEND
 
 Para abrir e rodar o front do projeto, execute `npm i` para instalar as dependências e `npm start` para iniciar o projeto.
 
 Depois, acesse <a href="http://localhost:4200/">http://localhost:4200/</a> no seu navegador.
+
+Para rodar o servidor do Back End, abra separadamente a pasta, no terminar dentro da pasta Back-End digite `npm i` e `node index.js`.
+
+## 🛠️ Abrir e rodar o projeto BACKEND
+
+API Nest
+
+Para abrir e rodar o back do projeto, execute `npm i` para instalar as dependências e `npm run start` para iniciar o projeto.
+
+Com a aplicação em execução, abra o seu navegador e acesse http://localhost:8080/api para ter acesso ao Swagger,
 
 Para rodar o servidor do Back End, abra separadamente a pasta, no terminar dentro da pasta Back-End digite `npm i` e `node index.js`.
 
