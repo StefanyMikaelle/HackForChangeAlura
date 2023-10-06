@@ -47,8 +47,6 @@ Para abrir e rodar o back do projeto, execute `npm i` para instalar as dependên
 
 Com a aplicação em execução, abra o seu navegador e acesse http://localhost:8080/api para ter acesso ao Swagger,
 
-Para rodar o servidor do Back End, abra separadamente a pasta, no terminar dentro da pasta Back-End digite `npm i` e `node index.js`.
-
 
 ## 📚 Mais informações do projeto
 
