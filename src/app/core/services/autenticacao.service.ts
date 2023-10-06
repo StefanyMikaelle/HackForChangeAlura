@@ -20,10 +20,10 @@ export class AutenticacaoService {
     private userService: UserService
   ) {}
 
-  autenticar(login: string, password: string): Observable<HttpResponse<AuthResponse>> {
+  autenticar(email: string, senha: string): Observable<HttpResponse<AuthResponse>> {
     return this.http.post<AuthResponse>(
-      `${this.apiUrl}/usuarios/login`,
-      { login, password },
+      `${this.apiUrl}/auth/login`,
+      { email, senha },
       { observe: 'response'}
     ).pipe(
       tap((response) => {

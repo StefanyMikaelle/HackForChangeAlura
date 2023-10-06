@@ -20,16 +20,16 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      login: [null, [Validators.required, Validators.email]],
-      password: [null, Validators.required]
+      email: [null, [Validators.required, Validators.email]],
+      senha: [null, Validators.required]
     })
   }
 
   login() {
     if(this.loginForm.valid) {
-      const login = this.loginForm.value.login;
-      const password = this.loginForm.value.password;
-      this.authService.autenticar(login, password).subscribe({
+      const email = this.loginForm.value.email;
+      const senha = this.loginForm.value.senha;
+      this.authService.autenticar(email, senha).subscribe({
         next: (value) => {
           console.log('Autenticado com sucesso', value)
           this.router.navigateByUrl('/')

@@ -9,14 +9,14 @@
         <mat-card-content>
           <mat-form-field appearance="outline">
             <mat-label>E-mail</mat-label>
-            <input matInput formControlName="login" type="login" placeholder="Digite seu e-mail">
-            <mat-error *ngIf="loginForm.get('login')?.errors?.['required']">E-mail é obrigatório</mat-error>
-            <mat-error *ngIf="loginForm.get('login')?.errors?.['login']">E-mail inválido</mat-error>
+            <input matInput formControlName="email" type="email" placeholder="Digite seu e-mail">
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
+            <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">E-mail inválido</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
-            <input matInput formControlName="password" type="password" placeholder="Digite sua senha">
-            <mat-error *ngIf="loginForm.get('password')?.errors">Senha é obrigatória</mat-error>
+            <input matInput formControlName="senha" type="senha" placeholder="Digite sua senha">
+            <mat-error *ngIf="loginForm.get('senha')?.errors">Senha é obrigatória</mat-error>
           </mat-form-field>
           <p class="fogot-password">Esqueceu a senha?
             <a routerLink="/forgotpass">Clique aqui para redefini-la.</a>

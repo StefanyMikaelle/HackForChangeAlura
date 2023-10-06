@@ -22,19 +22,19 @@
           </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>E-mail</mat-label>
-              <input matInput formControlName="login" type="login" placeholder="Digite seu e-mail">
-              <mat-error *ngIf="cadastroForm.get('login')?.errors?.['required']">E-mail é obrigatório</mat-error>
-              <mat-error *ngIf="cadastroForm.get('login')?.errors?.['login']">E-mail inválido</mat-error>
+              <input matInput formControlName="email" type="email" placeholder="Digite seu e-mail">
+              <mat-error *ngIf="cadastroForm.get('email')?.errors?.['required']">E-mail é obrigatório</mat-error>
+              <mat-error *ngIf="cadastroForm.get('email')?.errors?.['email']">E-mail inválido</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Senha</mat-label>
-              <input matInput formControlName="password" type="password" placeholder="Digite sua senha">
-              <mat-error *ngIf="cadastroForm.get('password')?.errors?.['required']">Senha é obrigatória</mat-error>
-              <mat-error *ngIf="cadastroForm.get('password')?.errors?.['minlength']">Senha deve ter pelo menos 3 caracteres</mat-error>
+              <input matInput formControlName="senha" type="senha" placeholder="Digite sua senha">
+              <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['required']">Senha é obrigatória</mat-error>
+              <mat-error *ngIf="cadastroForm.get('senha')?.errors?.['minlength']">Senha deve ter pelo menos 3 caracteres</mat-error>
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Confirmar Senha</mat-label>
-              <input matInput formControlName="confirmarSenha" type="password" placeholder="Repita sua senha">
+              <input matInput formControlName="confirmarSenha" type="senha" placeholder="Repita sua senha">
               <mat-error *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']">Confirmação de Senha é obrigatória</mat-error>
               <mat-error *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['equalTo']">Senhas não coincidem</mat-error>
             </mat-form-field>
